@@ -1,13 +1,12 @@
 import React from 'react'
 import {render} from 'react-dom'
-import Hello from '../src/hello'
+import AppContainer from '../src/AppContainer'
 
-const App = React.createClass({
+const Index = React.createClass({
   render (){
     return(
-      <Hello/>
+      <AppContainer/>
     )
   }
 })
-
-render(<App/>, document.getElementById('root'))
+render(<Index/>, document.getElementById('root'))
