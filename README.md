@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/wordyallen/fvi-reviews.png?label=ready&title=Ready)](https://waffle.io/wordyallen/fvi-reviews)
 # FVI Review Portal
 [![Build Status](https://travis-ci.org/wordyallen/fvi-reviews.svg?branch=master)](https://travis-ci.org/wordyallen/fvi-reviews)
 
