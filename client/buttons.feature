@@ -12,5 +12,3 @@ Feature: Review buttons
     Given the yelp button loads
     When the user clicks the button
     Then the user should be directed to the yelp review page
-
-*

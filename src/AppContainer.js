@@ -1,4 +1,5 @@
 import React from 'react'
+import YelpButton from "./yelpButton"
 
 
 export default React.createClass({
@@ -12,7 +13,7 @@ export default React.createClass({
           </a>
         </div>
         <div  className='is-flex' style={styles.content}>
-          Put Buttons Here
+          <YelpButton/>
         </div>
       </div>
     )
