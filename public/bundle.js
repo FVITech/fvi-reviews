@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d4aac7b0f77a4d56e779"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "874c435ba9dba01681e6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -48639,13 +48639,12 @@
 	            { className: 'icon' },
 	            _react2['default'].createElement('i', { className: 'fa fa-google' })
 	          ),
-	          '  ',
 	          _react2['default'].createElement(
 	            'span',
 	            null,
 	            'Review FVI on Google'
 	          ),
-	          '        '
+	          '     '
 	        )
 	      );
 	    }
