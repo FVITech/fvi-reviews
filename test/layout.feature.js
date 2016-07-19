@@ -18,6 +18,15 @@ Feature('Layout',
         expect(wrapper.find('img')).to.exist
     })
 
+    
+
+
+    // Scenario: User wants to review fvi.edu with google
+    //   Given the google button loads
+    //   When the user clicks the button
+    //   Then the user should be directed to the google review page
+
+
 
   })
 })

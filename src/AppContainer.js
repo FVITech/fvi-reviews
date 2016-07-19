@@ -1,4 +1,5 @@
 import React from 'react'
+import FacebookButton from './facebookButton.js'
 
 
 export default React.createClass({
@@ -11,8 +12,8 @@ export default React.createClass({
             <img height='100' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
         </div>
-        <div  className='is-flex' style={styles.content}>
-          Put Buttons Here
+        <div className='is-flex' style={styles.content}>
+          <FacebookButton/>
         </div>
       </div>
     )
