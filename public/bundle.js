@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "70abc1ce6ff38a98e1b5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d4aac7b0f77a4d56e779"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -48643,7 +48643,7 @@
 	          _react2['default'].createElement(
 	            'span',
 	            null,
-	            'Review on Google'
+	            'Review FVI on Google'
 	          ),
 	          '        '
 	        )
