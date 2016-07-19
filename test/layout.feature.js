@@ -14,7 +14,6 @@ Feature('Layout',
 
   Scenario('User visits fvireview.surge.sh',()=>{
     Then('the user sees a logo and header',()=>{
-
         expect(wrapper.find('img')).to.exist
     })
 
