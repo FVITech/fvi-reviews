@@ -16,16 +16,14 @@ export default React.createClass({
         </div>
 
         <div  className='is-flex' style={styles.content}>
+
           <div style={styles.button}>
             <YelpButton/>
           </div>
 
-
           <div style={styles.button}>
             <FacebookButton/>
           </div>
-
-
 
           <div style={styles.button}>
             <GoogleButton/>
