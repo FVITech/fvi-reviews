@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "638878373f402ed8fd5a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3736b21d3710edb6bda1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28230,20 +28230,25 @@
 	  displayName: 'yelpButton',
 	  render: function () {
 	    function render() {
+	      var url = 'https://www.yelp.com/writeareview/biz/5hFFu5-9B5aXN2NahKt2qg?return_url=%2Fbiz%2F5hFFu5-9B5aXN2NahKt2qg';
 	      return _react2['default'].createElement(
-	        'button',
-	        { 'class': 'button is-danger is-large' },
+	        'div',
+	        null,
 	        _react2['default'].createElement(
-	          'span',
-	          { 'class': 'icon' },
-	          _react2['default'].createElement('i', { 'class': 'fa fa-yelp' })
-	        ),
-	        _react2['default'].createElement(
-	          'span',
-	          null,
-	          'Review FVI on Yelp'
-	        ),
-	        '    '
+	          'a',
+	          { href: url, className: 'button is-danger is-large' },
+	          _react2['default'].createElement(
+	            'span',
+	            { className: 'icon' },
+	            _react2['default'].createElement('i', { className: 'fa fa-yelp' })
+	          ),
+	          _react2['default'].createElement(
+	            'span',
+	            null,
+	            'Review FVI on Yelp'
+	          ),
+	          '    '
+	        )
 	      );
 	    }
 
