@@ -1,0 +1,23 @@
+import React from 'react'
+import {mount, shallow} from 'enzyme'
+import {expect} from 'chai'
+
+export default React.createClass({
+  render (){
+    return(
+      <div>
+        <a href='https://www.facebook.com/FloridaVocationalInstitute/reviews'
+          className='button is-info is-large'>
+          <span className="icon"><i className="fa fa-facebook"></i></span>
+          <span>Review FVI on Facebook</span> &nbsp;&nbsp;&nbsp;&nbsp;
+        </a>
+      </div>
+    )
+  }
+})
+
+
+    // <a href='https://www.facebook.com/FloridaVocationalInstitute/reviews' class='button is-info'>
+    //   <span class="icon"><i class="fa fa-facebook"></i></span>
+    //   <span>facebook</span>
+    // </a>
