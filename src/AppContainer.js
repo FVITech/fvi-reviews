@@ -1,6 +1,10 @@
 import React from 'react'
+<<<<<<< HEAD
 import YelpButton from "./yelpButton"
 
+=======
+import YelpButton from './yelpButton'
+>>>>>>> 3c2e5a9534b11d590bfbc43e41cf7d09113a96b4
 
 export default React.createClass({
 
@@ -13,12 +17,15 @@ export default React.createClass({
           </a>
         </div>
         <div  className='is-flex' style={styles.content}>
+<<<<<<< HEAD
           <YelpButton/>
+=======
+          <YelpButton />
+>>>>>>> 3c2e5a9534b11d590bfbc43e41cf7d09113a96b4
         </div>
       </div>
     )
   }
-
 })
 
 const styles = {
