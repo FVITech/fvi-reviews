@@ -9,7 +9,7 @@ export default React.createClass({
         <a href='https://www.facebook.com/FloridaVocationalInstitute/reviews'
           className='button is-info is-large'>
           <span className="icon"><i className="fa fa-facebook"></i></span>
-          <span>Review FVI on Facebook</span> &nbsp;&nbsp;&nbsp;&nbsp;
+          <span>Review FVI on Facebook</span>
         </a>
       </div>
     )
