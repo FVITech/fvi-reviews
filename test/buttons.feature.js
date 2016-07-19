@@ -8,7 +8,12 @@ import FacebookButton from '../src/facebookButton.js'
 
 Feature('Review buttons',
 
-'The review sites are google, facebook and yelp.', ()=>{
+`Make it as effortless as possible for students to review fvi.edu.
+ The review sites are google, facebook and yelp.
+For more information see the attached 'online_review.pdf' documents provided byt he client.`,
+
+
+ ()=>{
 
   Scenario('User wants to review fvi.edu with yelp',()=>{
     const wrapper = shallow(<YelpButton/>)
