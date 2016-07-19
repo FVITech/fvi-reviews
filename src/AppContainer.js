@@ -1,4 +1,5 @@
 import React from 'react'
+import GoogleButton from '../src/GoogleButton'
 
 
 export default React.createClass({
@@ -11,13 +12,12 @@ export default React.createClass({
             <img height='100' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
         </div>
-        <div  className='is-flex' style={styles.content}>
-          Put Buttons Here
+        <div className='is-flex' style={styles.content}>
+          <GoogleButton/>
         </div>
       </div>
     )
   }
-
 })
 
 const styles = {
