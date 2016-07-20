@@ -1,5 +1,7 @@
 import React from 'react'
-import GoogleButton from '../src/GoogleButton'
+import YelpButton from './yelpButton'
+import FacebookButton from './facebookButton.js'
+import GoogleButton from './GoogleButton'
 
 
 export default React.createClass({
@@ -12,8 +14,21 @@ export default React.createClass({
             <img height='100' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
         </div>
-        <div className='is-flex' style={styles.content}>
-          <GoogleButton/>
+
+        <div  className='is-flex' style={styles.content}>
+
+          <div style={styles.button}>
+            <YelpButton/>
+          </div>
+
+          <div style={styles.button}>
+            <FacebookButton/>
+          </div>
+
+          <div style={styles.button}>
+            <GoogleButton/>
+          </div>
+
         </div>
       </div>
     )
@@ -23,7 +38,7 @@ export default React.createClass({
 const styles = {
   app:{
     flexDirection: 'column',
-    height: '100vh',
+    height: '80vh',
 
   },
   nav:{
@@ -39,4 +54,7 @@ const styles = {
     justifyContent:'center',
     flexDirection: 'column',
   },
+  button:{
+    margin: 20
+  }
 }

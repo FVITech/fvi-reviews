@@ -8,9 +8,12 @@ Feature: Review buttons
     When the user clicks the button
     Then the user should be directed to the google review page
 
+  Scenario: User wants to review fvi.edu with facebook
+    Given the google button loads
+    When the user clicks the button
+    Then the user should be directed to the facebook review page
+
   Scenario: User wants to review fvi.edu with yelp
     Given the yelp button loads
     When the user clicks the button
     Then the user should be directed to the yelp review page
-
-*
