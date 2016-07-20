@@ -9,8 +9,8 @@ import FacebookButton from '../src/facebookButton.js'
 Feature('Review buttons',
 
 `Make it as effortless as possible for students to review fvi.edu.
- The review sites are google, facebook and yelp.
-For more information see the attached 'online_review.pdf' documents provided byt he client.`,
+    The review sites are google, facebook and yelp.
+    For more information see the attached 'online_review.pdf' document provided by the client.\n`,
 
 
  ()=>{
@@ -25,7 +25,7 @@ For more information see the attached 'online_review.pdf' documents provided byt
     })
 
     When('the user clicks the button',()=>{
-    	wrapper.find('a').simulate('click')
+    	expect(wrapper.find('a').simulate('click')).to.be.ok
     })
 
 
@@ -55,7 +55,7 @@ For more information see the attached 'online_review.pdf' documents provided byt
     })
 
     When('the user clicks the button',()=>{
-    	wrapper.find('a').simulate('click')
+    	expect(wrapper.find('a').simulate('click')).to.be.ok
     })
 
     Then('the user should be directed to the facebook review page',()=>{
@@ -88,7 +88,7 @@ For more information see the attached 'online_review.pdf' documents provided byt
     })
 
     When('the user clicks the button',()=>{
-      wrapper.find('a').simulate('click');
+      expect(wrapper.find('a').simulate('click')).to.be.ok
     })
 
     Then('the user should be directed to the google review page',()=>{

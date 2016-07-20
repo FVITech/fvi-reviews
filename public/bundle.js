@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "874c435ba9dba01681e6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0af662a8a64a65c8aaf5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8206,6 +8206,7 @@
 	    return render;
 	  }()
 	});
+
 	(0, _reactDom.render)(_react2['default'].createElement(Index, null), document.getElementById('root'));
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
@@ -28176,7 +28177,7 @@
 	          _react2['default'].createElement(
 	            'a',
 	            { href: '#' },
-	            _react2['default'].createElement('img', { height: '100', src: 'http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png' })
+	            _react2['default'].createElement('img', { height: '60', src: 'http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png' })
 	          )
 	        ),
 	        _react2['default'].createElement(
@@ -28217,7 +28218,7 @@
 	    justifyContent: 'space-around',
 	    backgroundColor: 'white',
 	    fontSize: '30',
-	    flex: 1
+	    flex: 1.5
 	  },
 	  content: {
 	    flex: 6,
@@ -28461,11 +28462,6 @@
 	    return render;
 	  }()
 	});
-
-	// <a href='https://www.facebook.com/FloridaVocationalInstitute/reviews' class='button is-info'>
-	//   <span class="icon"><i class="fa fa-facebook"></i></span>
-	//   <span>facebook</span>
-	// </a>
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "facebookButton.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
