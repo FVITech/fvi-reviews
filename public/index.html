@@ -16,24 +16,6 @@
   <div id="root"></div>
   <script src="bundle.js"></script>
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyq5CdyL4QAmfUnXmsWAvFJg-4V3vIIVA&libraries=places"/>
-  <script type="text/javascript">
 
-    const placeID = 'ChIJ27yqnW642YgRuRXbc_O1jqg'
-
-    var request = {
-      placeId: placeID
-    };
-
-    var service = new google.maps.places.PlacesService(map); // map is your map object
-
-    service.getDetails(request, function(place, status) {
-      if (status == google.maps.places.PlacesServiceStatus.OK) {
-        console.log(place.reviews);
-      }
-    });
-    console.log('test')
-
-  </script>
 </body>
 </html>

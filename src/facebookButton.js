@@ -15,9 +15,3 @@ export default React.createClass({
     )
   }
 })
-
-
-    // <a href='https://www.facebook.com/FloridaVocationalInstitute/reviews' class='button is-info'>
-    //   <span class="icon"><i class="fa fa-facebook"></i></span>
-    //   <span>facebook</span>
-    // </a>

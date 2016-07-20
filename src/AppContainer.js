@@ -11,7 +11,7 @@ export default React.createClass({
       <div className='is-flex' style={styles.app}>
         <div  className="is-flex" style={styles.nav}>
           <a href="#">
-            <img height='100' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
+            <img height='60' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
         </div>
 
@@ -46,7 +46,7 @@ const styles = {
     justifyContent:'space-around',
     backgroundColor: 'white',
     fontSize: '30',
-    flex: 1,
+    flex: 1.5,
   },
   content:{
     flex:6  ,
