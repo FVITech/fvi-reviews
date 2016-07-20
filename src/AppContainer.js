@@ -46,10 +46,10 @@ const styles = {
     justifyContent:'space-around',
     backgroundColor: 'white',
     fontSize: '30',
-    flex: 1.5,
+    flex: 1,
   },
   content:{
-    flex:6  ,
+    flex:8  ,
     alignItems:'center',
     justifyContent:'center',
     flexDirection: 'column',
