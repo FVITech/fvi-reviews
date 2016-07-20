@@ -21,7 +21,7 @@ Feature('Review buttons','The review sites are google, facebook and yelp.', ()=>
     Then('the user should be directed to the google review page',()=>{
       expect(wrapper.matchesElement(
         <div>
-          <a className='button is-danger' href='https://plus.google.com/105289039757508765516'>
+          <a className='button is-danger is-large' href='https://plus.google.com/105289039757508765516'>
             <span className="icon"><i className="fa fa-google"></i></span>
             Review on Google
           </a>
