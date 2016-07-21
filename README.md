@@ -1,5 +1,5 @@
 # FVI Review Portal
-[![Build Status](https://travis-ci.org/wordyallen/fvi-reviews.svg?branch=master)](https://travis-ci.org/wordyallen/fvi-reviews) [![Stories in Ready](https://badge.waffle.io/wordyallen/fvi-reviews.png?label=ready&title=Ready)](http://waffle.io/wordyallen/fvi-reviews)
+[![Build Status](https://travis-ci.org/FVITech/fvi-reviews.svg?branch=master)](https://travis-ci.org/FVITech/fvi-reviews) [![Stories in Ready](https://badge.waffle.io/wordyallen/fvi-reviews.png?label=ready&title=Ready)](http://waffle.io/wordyallen/fvi-reviews)
 
 ![](http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png)
 
