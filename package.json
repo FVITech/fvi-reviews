@@ -1,6 +1,6 @@
 {
   "name": "fvi-reviews",
-  "version": "1.12.0",
+  "version": "1.13.0",
   "description": "A portal to review fvi.edu",
   "main": "webpack.config.js",
   "scripts": {
