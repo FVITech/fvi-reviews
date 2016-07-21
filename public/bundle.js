@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c78c46bfdd6ec544028d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e6c07dd454ab9d81804a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -8206,6 +8206,9 @@
 	    return render;
 	  }()
 	});
+
+	review_count;
+	florida - vocational - institute - miami;
 
 	(0, _reactDom.render)(_react2['default'].createElement(Index, null), document.getElementById('root'));
 
