@@ -1,14 +1,15 @@
 {
   "name": "fvi-reviews",
-  "version": "1.5.0",
+  "version": "1.14.0",
   "description": "A portal to review fvi.edu",
   "main": "webpack.config.js",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --host 0.0.0.0",
     "test": "mocha test/helpers/browser.js test/*.feature.js --ui mocha-gherkin --reporter mocha-gherkin/build/spec",
     "watch": "mocha -w test/helpers/browser.js test/*.feature.js --ui mocha-gherkin --reporter mocha-gherkin/build/spec",
-    "deploy": "surge -p public -d fvireview.surge.sh",
-    "build": "webpack"
+    "deploy": "surge -p public -d fvireviews.surge.sh",
+    "build": "webpack",
+    "yolo": "git add --all && git commit -am \"$(date)\" && npm version minor && git push origin master --tags && npm run build && npm run deploy"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
