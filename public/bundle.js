@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0af662a8a64a65c8aaf5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c78c46bfdd6ec544028d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28218,10 +28218,10 @@
 	    justifyContent: 'space-around',
 	    backgroundColor: 'white',
 	    fontSize: '30',
-	    flex: 1.5
+	    flex: 1
 	  },
 	  content: {
-	    flex: 6,
+	    flex: 8,
 	    alignItems: 'center',
 	    justifyContent: 'center',
 	    flexDirection: 'column'

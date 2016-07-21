@@ -14,6 +14,8 @@ const Index = React.createClass({
   }
 })
 
+  review_count
+  florida-vocational-institute-miami
 
 
 render(<Index/>, document.getElementById('root'))
