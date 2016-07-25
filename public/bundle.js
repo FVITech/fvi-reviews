@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c78c46bfdd6ec544028d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "be6d24eb6439d5f05677"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28162,6 +28162,10 @@
 
 	var _GoogleButton2 = _interopRequireDefault(_GoogleButton);
 
+	var _yelpReviews = __webpack_require__(479);
+
+	var _yelpReviews2 = _interopRequireDefault(_yelpReviews);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
 	exports['default'] = _react2['default'].createClass({
@@ -28197,7 +28201,8 @@
 	            'div',
 	            { style: styles.button },
 	            _react2['default'].createElement(_GoogleButton2['default'], null)
-	          )
+	          ),
+	          _react2['default'].createElement(_yelpReviews2['default'], null)
 	        )
 	      );
 	    }
@@ -48650,6 +48655,88 @@
 	});
 
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "GoogleButton.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 479 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(77), RootInstanceProvider = __webpack_require__(85), ReactMount = __webpack_require__(87), React = __webpack_require__(139); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(139);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+	exports["default"] = _react2["default"].createClass({
+	  displayName: "yelpReviews",
+	  getPayload: function () {
+	    function getPayload() {
+
+	      var consumerKey = "vBjqc9wkl8Gxsf-QeF4ydA";
+	      var consumerSecret = "nRgk2K9x6EpZ1kYZzBVHmmo2ibE";
+	      var accessToken = "7H6Ye4DpHR9lErOmrESQSqlD3vMBZr3m";
+	      var accessTokenSecret = "DjDZUOZhR44wa0OfuTH8WKxVtm8";
+	      var signatureMethod = "HMAC-SHA1";
+
+	      var accessor = {
+	        consumerSecret: consumerSecret,
+	        tokenSecret: accessTokenSecret
+	      };
+
+	      var parameters = [['callback', 'cb'], ['oauth_consumer_key', consumerKey], ['oauth_consumer_secret', consumerSecret], ['oauth_token', accessToken], ['oauth_signature_method', 'HMAC-SHA1']];
+
+	      var message = {
+	        'action': 'https://api.yelp.com/v2/business/florida-vocational-institute-miami',
+	        'method': 'GET',
+	        'parameters': parameters
+	      };
+
+	      OAuth.setTimestampAndNonce(message);
+	      OAuth.SignatureMethod.sign(message, accessor);
+
+	      var parameterMap = OAuth.getParameterMap(message.parameters);
+
+	      $.ajax({
+	        'url': message.action,
+	        'data': parameterMap,
+	        'dataType': 'jsonp',
+	        'jsonpCallback': 'cb',
+	        'cache': true
+	      }).done(function (data, textStatus, jqXHR) {
+	        return console.log(jqXHR.responseJSON.reviews);
+	      }).fail(function () {
+	        return console.log('fucked up');
+	      });
+	    }
+
+	    return getPayload;
+	  }(),
+	  handleReviews: function () {
+	    function handleReviews() {
+	      this.getPayload();
+	    }
+
+	    return handleReviews;
+	  }(),
+	  render: function () {
+	    function render() {
+
+	      return _react2["default"].createElement("div", null);
+	    }
+
+	    return render;
+	  }()
+	});
+
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "yelpReviews.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }

@@ -1,9 +1,13 @@
 import React from 'react'
-
+import OAuth from './OAuth'
 
 
 export default React.createClass({
-
+  getInitialState(){
+    return {
+      reviews:[]
+    }
+  },
   getPayload(){
 
     const consumerKey = "vBjqc9wkl8Gxsf-QeF4ydA"
@@ -45,17 +49,17 @@ export default React.createClass({
         'jsonpCallback' : 'cb',
         'cache': true
     })
-    .done((data, textStatus, jqXHR)=> console.log(jqXHR.responseJSON.reviews))
+    .done((data, textStatus, jqXHR)=> this.setState({reviews: jqXHR.responseJSON}))
     .fail(()=>console.log('fucked up'))
 
   },
-  handleReviews(){
+  componentWillMount(){
       this.getPayload()
   },
   render (){
 
     return(
-      <div></div>
+      <div>{this.state.reviews}</div>
     )
   }
 })
