@@ -31,7 +31,9 @@ export default React.createClass({
             <GoogleButton/>
           </div>
 
-          <YelpReviews />
+
+            <YelpReviews />
+
 
         </div>
       </div>
@@ -42,7 +44,7 @@ export default React.createClass({
 const styles = {
   app:{
     flexDirection: 'column',
-    height: '80vh',
+    height: '100vh',
 
   },
   nav:{
@@ -56,7 +58,10 @@ const styles = {
     flex:8  ,
     alignItems:'center',
     justifyContent:'center',
+     flexWrap: 'wrap',
     flexDirection: 'column',
+
+
   },
   button:{
     margin: 20

@@ -1,5 +1,7 @@
 import React from 'react'
+import $ from "jquery"
 import OAuth from './OAuth'
+import YelpList from './yelpList'
 
 
 export default React.createClass({
@@ -8,6 +10,7 @@ export default React.createClass({
       reviews:[]
     }
   },
+
   getPayload(){
 
     const consumerKey = "vBjqc9wkl8Gxsf-QeF4ydA"
@@ -49,17 +52,27 @@ export default React.createClass({
         'jsonpCallback' : 'cb',
         'cache': true
     })
-    .done((data, textStatus, jqXHR)=> this.setState({reviews: jqXHR.responseJSON}))
+    .done((data, textStatus, jqXHR)=> {
+        console.log(jqXHR.responseJSON.reviews)
+        this.setState({reviews: jqXHR.responseJSON.reviews})
+
+      }
+    )
     .fail(()=>console.log('fucked up'))
 
   },
+
   componentWillMount(){
       this.getPayload()
+  },
+  componentDidMount(){
+    setInterval(this.getPayload, 60000)
   },
   render (){
 
     return(
-      <div>{this.state.reviews}</div>
+        <YelpList reviews={this.state.reviews}/>
     )
   }
+
 })
