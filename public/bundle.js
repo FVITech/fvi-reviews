@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a0c6b5e4457cff21598b"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "afefc5bd6401a6526777"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -28166,6 +28166,10 @@
 	
 	var _yelpReviews2 = _interopRequireDefault(_yelpReviews);
 	
+	var _nav = __webpack_require__(483);
+	
+	var _nav2 = _interopRequireDefault(_nav);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	exports['default'] = _react2['default'].createClass({
@@ -28175,6 +28179,7 @@
 	      return _react2['default'].createElement(
 	        'div',
 	        { className: 'is-flex', style: styles.app },
+	        _react2['default'].createElement(_nav2['default'], null),
 	        _react2['default'].createElement(
 	          'div',
 	          { className: 'is-flex', style: styles.nav },
@@ -48668,7 +48673,7 @@
 	'use strict';
 	
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 	
 	var _react = __webpack_require__(139);
@@ -48690,82 +48695,82 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	exports['default'] = _react2['default'].createClass({
-	  displayName: 'yelpReviews',
-	  getInitialState: function () {
-	    function getInitialState() {
-	      return {
-	        reviews: []
-	      };
-	    }
+	    displayName: 'yelpReviews',
+	    getInitialState: function () {
+	        function getInitialState() {
+	            return {
+	                reviews: []
+	            };
+	        }
 	
-	    return getInitialState;
-	  }(),
-	  getPayload: function () {
-	    function getPayload() {
-	      var _this = this;
+	        return getInitialState;
+	    }(),
+	    getPayload: function () {
+	        function getPayload() {
+	            var _this = this;
 	
-	      var consumerKey = "vBjqc9wkl8Gxsf-QeF4ydA";
-	      var consumerSecret = "nRgk2K9x6EpZ1kYZzBVHmmo2ibE";
-	      var accessToken = "7H6Ye4DpHR9lErOmrESQSqlD3vMBZr3m";
-	      var accessTokenSecret = "DjDZUOZhR44wa0OfuTH8WKxVtm8";
-	      var signatureMethod = "HMAC-SHA1";
+	            var consumerKey = "vBjqc9wkl8Gxsf-QeF4ydA";
+	            var consumerSecret = "nRgk2K9x6EpZ1kYZzBVHmmo2ibE";
+	            var accessToken = "7H6Ye4DpHR9lErOmrESQSqlD3vMBZr3m";
+	            var accessTokenSecret = "DjDZUOZhR44wa0OfuTH8WKxVtm8";
+	            var signatureMethod = "HMAC-SHA1";
 	
-	      var accessor = {
-	        consumerSecret: consumerSecret,
-	        tokenSecret: accessTokenSecret
-	      };
+	            var accessor = {
+	                consumerSecret: consumerSecret,
+	                tokenSecret: accessTokenSecret
+	            };
 	
-	      var parameters = [['callback', 'cb'], ['oauth_consumer_key', consumerKey], ['oauth_consumer_secret', consumerSecret], ['oauth_token', accessToken], ['oauth_signature_method', 'HMAC-SHA1']];
+	            var parameters = [['callback', 'cb'], ['oauth_consumer_key', consumerKey], ['oauth_consumer_secret', consumerSecret], ['oauth_token', accessToken], ['oauth_signature_method', 'HMAC-SHA1']];
 	
-	      var message = {
-	        'action': 'https://api.yelp.com/v2/business/florida-vocational-institute-miami',
-	        'method': 'GET',
-	        'parameters': parameters
-	      };
+	            var message = {
+	                'action': 'https://api.yelp.com/v2/business/florida-vocational-institute-miami',
+	                'method': 'GET',
+	                'parameters': parameters
+	            };
 	
-	      _OAuth2['default'].setTimestampAndNonce(message);
-	      _OAuth2['default'].SignatureMethod.sign(message, accessor);
+	            _OAuth2['default'].setTimestampAndNonce(message);
+	            _OAuth2['default'].SignatureMethod.sign(message, accessor);
 	
-	      var parameterMap = _OAuth2['default'].getParameterMap(message.parameters);
+	            var parameterMap = _OAuth2['default'].getParameterMap(message.parameters);
 	
-	      _jquery2['default'].ajax({
-	        'url': message.action,
-	        'data': parameterMap,
-	        'dataType': 'jsonp',
-	        'jsonpCallback': 'cb',
-	        'cache': true
-	      }).done(function (data, textStatus, jqXHR) {
-	        console.log(jqXHR.responseJSON.reviews);
-	        _this.setState({ reviews: jqXHR.responseJSON.reviews });
-	      }).fail(function () {
-	        return console.log('fucked up');
-	      });
-	    }
+	            _jquery2['default'].ajax({
+	                'url': message.action,
+	                'data': parameterMap,
+	                'dataType': 'jsonp',
+	                'jsonpCallback': 'cb',
+	                'cache': true
+	            }).done(function (data, textStatus, jqXHR) {
+	                console.log(jqXHR.responseJSON.reviews);
+	                _this.setState({ reviews: jqXHR.responseJSON.reviews });
+	            }).fail(function () {
+	                return console.log('fucked up');
+	            });
+	        }
 	
-	    return getPayload;
-	  }(),
-	  componentWillMount: function () {
-	    function componentWillMount() {
-	      this.getPayload();
-	    }
+	        return getPayload;
+	    }(),
+	    componentWillMount: function () {
+	        function componentWillMount() {
+	            this.getPayload();
+	        }
 	
-	    return componentWillMount;
-	  }(),
-	  componentDidMount: function () {
-	    function componentDidMount() {
-	      setInterval(this.getPayload, 60000);
-	    }
+	        return componentWillMount;
+	    }(),
+	    componentDidMount: function () {
+	        function componentDidMount() {
+	            setInterval(this.getPayload, 60000);
+	        }
 	
-	    return componentDidMount;
-	  }(),
-	  render: function () {
-	    function render() {
+	        return componentDidMount;
+	    }(),
+	    render: function () {
+	        function render() {
 	
-	      return _react2['default'].createElement(_yelpList2['default'], { reviews: this.state.reviews });
-	    }
+	            return _react2['default'].createElement(_yelpList2['default'], { reviews: this.state.reviews });
+	        }
 	
-	    return render;
-	  }()
+	        return render;
+	    }()
 	});
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "yelpReviews.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
@@ -59731,6 +59736,69 @@
 	});
 	
 	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "yelpList.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
+
+/***/ },
+/* 483 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(module) {/* REACT HOT LOADER */ if (true) { (function () { var ReactHotAPI = __webpack_require__(77), RootInstanceProvider = __webpack_require__(85), ReactMount = __webpack_require__(87), React = __webpack_require__(139); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } try { (function () {
+	
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(139);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	
+	exports["default"] = _react2["default"].createClass({
+	  displayName: "nav",
+	  render: function () {
+	    function render() {
+	      return _react2["default"].createElement(
+	        "nav",
+	        { className: "nav has-shadow" },
+	        _react2["default"].createElement(
+	          "div",
+	          { className: "container" },
+	          _react2["default"].createElement(
+	            "div",
+	            { className: "nav-left" },
+	            _react2["default"].createElement(
+	              "a",
+	              { className: "nav-item is-tab is-active" },
+	              "Card"
+	            ),
+	            _react2["default"].createElement(
+	              "a",
+	              { className: "nav-item is-tab" },
+	              "FaceBook"
+	            ),
+	            _react2["default"].createElement(
+	              "a",
+	              { className: "nav-item is-tab" },
+	              "Yelp"
+	            ),
+	            _react2["default"].createElement(
+	              "a",
+	              { className: "nav-item is-tab" },
+	              "tweeter"
+	            )
+	          )
+	        )
+	      );
+	    }
+	
+	    return render;
+	  }()
+	});
+	
+	/* REACT HOT LOADER */ }).call(this); } finally { if (true) { (function () { var foundReactClasses = module.hot.data && module.hot.data.foundReactClasses || false; if (module.exports && module.makeHot) { var makeExportsHot = __webpack_require__(246); if (makeExportsHot(module, __webpack_require__(139))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "nav.js" + ": " + err.message); } }); } } module.hot.dispose(function (data) { data.makeHot = module.makeHot; data.foundReactClasses = foundReactClasses; }); })(); } }
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)(module)))
 
 /***/ }

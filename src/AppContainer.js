@@ -3,13 +3,18 @@ import YelpButton from './yelpButton'
 import FacebookButton from './facebookButton.js'
 import GoogleButton from './GoogleButton'
 import YelpReviews from './yelpReviews'
-
+import Nav from './nav'
 
 export default React.createClass({
 
   render (){
     return(
+
+
+
+
       <div className='is-flex' style={styles.app}>
+
         <div  className="is-flex" style={styles.nav}>
           <a href="#">
             <img height='60' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
@@ -33,7 +38,7 @@ export default React.createClass({
 
 
             <YelpReviews />
-
+                <Nav/>
 
         </div>
       </div>
