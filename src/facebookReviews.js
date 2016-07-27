@@ -8,11 +8,18 @@ export default React.createClass({
 getInitialState(){
   return{
     reviews: [],
+<<<<<<< HEAD
   
   }
 },
 
 componentWillMount(){  console.log(r)
+=======
+  }
+},
+
+componentWillMount(){
+>>>>>>> moved fbreviews to fblist
   this.fbReviews();
 },
 
@@ -27,6 +34,7 @@ fbReviews(){
   },
   );
 
+<<<<<<< HEAD
 
   const getIds = (data)=>{
   const ids = data.map(r=>r.reviewer.id)
@@ -51,6 +59,8 @@ fbReviews(){
         Object.assign(this.state.reviews[0],urls) // merging reviews and imgUrls
         this.setState({reviews:d})
     }
+=======
+>>>>>>> moved fbreviews to fblist
 },
 
 
