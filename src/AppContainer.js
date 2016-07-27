@@ -1,8 +1,8 @@
 import React from 'react'
 import YelpButton from './yelpButton'
-import FacebookButton from './facebookButton.js'
+import FacebookButton from './facebookButton'
 import GoogleButton from './GoogleButton'
-
+import FacebookReviews from './facebookList'
 
 export default React.createClass({
 
@@ -27,6 +27,10 @@ export default React.createClass({
 
           <div style={styles.button}>
             <GoogleButton/>
+          </div>
+
+          <div>
+            <FacebookReviews />
           </div>
 
         </div>

@@ -5,17 +5,37 @@
 <meta name="viewport" content="width=device-width, minimum-scale=1.0">
 <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.17/css/bulma.min.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
-  rel="stylesheet"
-  integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1"
-  crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
 
 <body>
 
+  <script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js&appId=1633192043663565"></script>
+
+
+  <script>
+
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '1633192043663565',
+        xfbml      : true,
+        version    : 'v2.7'
+        });
+
+      FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+          }
+          else {
+            FB.login();
+        }
+      });
+
+    };
+
+  </script>
+
   <div id="root"></div>
   <script src="bundle.js"></script>
-
 
 </body>
 </html>

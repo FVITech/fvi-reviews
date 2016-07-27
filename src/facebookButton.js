@@ -1,13 +1,11 @@
 import React from 'react'
-import {mount, shallow} from 'enzyme'
-import {expect} from 'chai'
 
 export default React.createClass({
+
   render (){
     return(
       <div>
-        <a href='https://www.facebook.com/FloridaVocationalInstitute/reviews'
-          className='button is-info is-large'>
+        <a className='button is-info is-large' href='https://www.facebook.com/FloridaVocationalInstitute/reviews'>
           <span className="icon"><i className="fa fa-facebook"></i></span>
           <span>Review FVI on Facebook</span>
         </a>
@@ -15,3 +13,10 @@ export default React.createClass({
     )
   }
 })
+
+
+
+  // <div>
+  //   <p className='title'>Hello</p>
+  //   <button className='button' onClick={this.fbReviews}>Review FVI on Facebook</button>
+  // </div>
