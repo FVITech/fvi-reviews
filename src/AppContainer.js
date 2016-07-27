@@ -23,6 +23,8 @@ export default React.createClass({
 
         <div  className='is-flex' style={styles.content}>
 
+        <div style={styles.button}>
+          <GoogleButton/>
 
           <div style={styles.button}>
             <YelpButton/>
@@ -32,8 +34,7 @@ export default React.createClass({
             <FacebookButton/>
           </div>
 
-          <div style={styles.button}>
-            <GoogleButton/>
+
           </div>
 
 
