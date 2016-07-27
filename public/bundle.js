@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "37aeef749ba6fb229299"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "228cadd98eabca190a72"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -31103,7 +31103,7 @@
 	 * @since 0.1.0
 	 * @category Lang
 	 * @param {*} value The value to check.
-	 * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+	 * @returns {boolean} Returns `true` if `value` is correctly classified,
 	 *  else `false`.
 	 * @example
 	 *
@@ -34824,7 +34824,6 @@
 
 	var Symbol = __webpack_require__(255),
 	    Uint8Array = __webpack_require__(376),
-	    eq = __webpack_require__(263),
 	    equalArrays = __webpack_require__(373),
 	    mapToArray = __webpack_require__(377),
 	    setToArray = __webpack_require__(330);
@@ -34888,13 +34887,17 @@
 	
 	    case boolTag:
 	    case dateTag:
-	    case numberTag:
-	      // Coerce booleans to `1` or `0` and dates to milliseconds.
-	      // Invalid dates are coerced to `NaN`.
-	      return eq(+object, +other);
+	      // Coerce dates and booleans to numbers, dates to milliseconds and
+	      // booleans to `1` or `0` treating invalid dates coerced to `NaN` as
+	      // not equal.
+	      return +object == +other;
 	
 	    case errorTag:
 	      return object.name == other.name && object.message == other.message;
+	
+	    case numberTag:
+	      // Treat `NaN` vs. `NaN` as equal.
+	      return (object != +object) ? other != +other : object == +other;
 	
 	    case regexpTag:
 	    case stringTag:
@@ -34919,12 +34922,10 @@
 	        return stacked == other;
 	      }
 	      bitmask |= UNORDERED_COMPARE_FLAG;
+	      stack.set(object, other);
 	
 	      // Recursively compare objects (susceptible to call stack limits).
-	      stack.set(object, other);
-	      var result = equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
-	      stack['delete'](object);
-	      return result;
+	      return equalArrays(convert(object), convert(other), equalFunc, customizer, bitmask, stack);
 	
 	    case symbolTag:
 	      if (symbolValueOf) {
