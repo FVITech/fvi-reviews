@@ -1,75 +1,51 @@
 import React from 'react'
-import ReviewList from 'facebookList'
+import ReviewList from './facebookList'
 
-const token = 'EAAXNYSec0M0BAPL2w1EyrxHzM1PmR1UEoJ6dXtI5AD2siF7xwoocyGz8a39ZCGYWZA6xuKUUlHJx2fS4GS6mA9qwBM8hZAzFYdf2otlNC6cS9bFbvjhvUmmUnCfJZB17LWHnpTIMx18BjpP7dj513cv0Adfk4SK5t8AwXwl0GAZDZD'
+
+const token = 'EAACbrcvyUC4BAGF6K2jxADXY94RPwO1i3wLfEQIbvB8CfebgWt17MD4UlFw1TKAQ4CYh2FmJu8KEjWHVOxV6qPhHMZCZAnORqfHdMr52KL6ZBFZBqUXdvqycNNotdKIMPq7eZCtYd0NOLwzROZBqAIfTcFRhHKZC4MrQv1DO32IKwvgXHpZBpwp3'
 
 export default React.createClass({
 
 getInitialState(){
-  return{
-    reviews: [],
-<<<<<<< HEAD
-  
-  }
-},
 
-componentWillMount(){  console.log(r)
-=======
+    return{
+      reviews: [],
+
   }
 },
 
 componentWillMount(){
->>>>>>> moved fbreviews to fblist
   this.fbReviews();
 },
 
 fbReviews(){
 
-  FB.api(
-  `/746661705385761/ratings?access_token=${token}`,
-  'GET',
-  {},
-  function(response) {
-    getIds(response.data) //user picture
-  },
-  );
-
-<<<<<<< HEAD
-
-  const getIds = (data)=>{
-  const ids = data.map(r=>r.reviewer.id)
-
-    //ids.map to get users picture
-    ids.map(id=>{
-
     FB.api(
-      `/${id}/picture?access_token=${token}`,
-      `GET`,
+      // `/746661705385761/ratings?access_token=${token}`, //leotheLion page
+      `/702254009919090/ratings?access_token=${token}`, //FVI page
+      'GET',
       {},
-      function(imgUrls){
+      function(response) {
+        getReviews(response.data)// recieving payload..good
+        console.log(response.data, 'recieving payload')
+      },
+    );
 
-        mergeIntoReviews(imgUrls) // imgUrls pulls user avatar url
-      }
-    )
-  })
-  }
+       const getReviews = (d) =>{
 
-    const mergeIntoReviews = (urls)=>{
-      console.log(this.state.reviews)
-        Object.assign(this.state.reviews[0],urls) // merging reviews and imgUrls
-        this.setState({reviews:d})
-    }
-=======
->>>>>>> moved fbreviews to fblist
+         this.setState({reviews: d})
+         console.log(this.state.reviews)
+       }
+
 },
 
-
 render (){
-    // console.log(this.state.reviews)
+
   return(
 
     <div>
-      <ReviewList reviews = {this.state.reviews} />
+
+      <ReviewList reviews={this.state.reviews} />
 
     </div>
 

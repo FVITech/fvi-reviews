@@ -2,7 +2,7 @@ import React from 'react'
 import YelpButton from './yelpButton'
 import FacebookButton from './facebookButton'
 import GoogleButton from './GoogleButton'
-import FacebookReviews from './facebookList'
+import FacebookReviews from './facebookReviews'
 
 
 export default React.createClass({
@@ -43,7 +43,7 @@ export default React.createClass({
 const styles = {
   app:{
     flexDirection: 'column',
-    height: '80vh',
+    // height: '80vh',
 
   },
   nav:{

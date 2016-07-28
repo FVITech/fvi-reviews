@@ -4,62 +4,59 @@ export default React.createClass({
 
 
   reviewList(){
-    return
+    console.log()
+    return this.props.reviews.map(function(r){
 
-    this.props.reviews.map(function(r){
+      const totalStars = [];
+      for (var i = 0; i < r.rating; i++) {
+        totalStars.push((<span key={i.toString()} className="icon is-small"><i className="fa fa-star" aria-hidden="true"></i></span>))
+      }
+
       return (
 
-        <div key={r.created_time} >
-
+        <div key={r.created_time} className="box"  >
           <article className="media">
-          <figure className="media-left">
-            <p className="image is-64x64">
-              <img src={r.data}/>
-            </p>
-          </figure>
-          <div className="media-content">
-            <div className="content">
-              <p>
-              <strong>{r.reviewer.name}</strong> <small>@johnsmith</small> <small>31m</small>
-              <br/>
-              {r.review_text}
-              </p>
+            <div className="media-left">
+              <figure className="image is-64x64">
+                <img src='' alt="Image"/>
+              </figure>
             </div>
-          <nav className="level">
-            <div className="level-left">
-              <a className="level-item">
-              <span className="icon is-small"><i className="fa fa-reply"></i></span>
-              </a>
-              <a className="level-item">
-              <span className="icon is-small"><i className="fa fa-retweet"></i></span>
-              </a>
-              <a className="level-item">
-              <span className="icon is-small"><i className="fa fa-heart"></i></span>
-              </a>
-            </div>
-          </nav>
-          </div>
-          <div className="media-right">
-          <button className="delete"></button>
-          </div>
-          </article>
+            <div className="media-content">
+              <div className="content">
+                <p>
+                  <strong>{r.reviewer.name}</strong> &nbsp; <small>{r.created_time.substring(0, 10)}</small>
+                  <br/>
+                  {r.review_text}
+                </p>
+              </div>
+              <nav className="level">
+              <div className="level-left">
+                <a className="level-item">
+                  {totalStars}
+                </a>
 
+              </div>
+              </nav>
+            </div>
+          </article>
         </div>
+
+
       )
 
     })
   },
 
 
-  render (){
-    return(
 
+
+  render(){
+    return(
       <div>
 
         {this.reviewList()}
 
       </div>
-
     )
   }
 })
