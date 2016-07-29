@@ -53,12 +53,13 @@ export default React.createClass({
         'cache': true
     })
     .done((data, textStatus, jqXHR)=> {
-        console.log(jqXHR.responseJSON.reviews)
+        // console.log(jqXHR.responseJSON.reviews)
         this.setState({reviews: jqXHR.responseJSON.reviews})
 
       }
     )
-    .fail(()=>console.log('fucked up'))
+    // .fail(()=>console.log('fucked up'))
+
 
   },
 

@@ -9,7 +9,12 @@ export default React.createClass({
 
   render (){
     return(
+
+
+
+
       <div className='is-flex' style={styles.app}>
+
         <div  className="is-flex" style={styles.nav}>
           <a href="#">
             <img height='60' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
@@ -18,6 +23,9 @@ export default React.createClass({
 
         <div  className='is-flex' style={styles.content}>
 
+          <div style={styles.button}>
+            <GoogleButton/>
+          </div>
 
           <div style={styles.button}>
             <YelpButton/>
@@ -27,13 +35,11 @@ export default React.createClass({
             <FacebookButton/>
           </div>
 
-          <div style={styles.button}>
-            <GoogleButton/>
-          </div>
+
+
 
 
             <YelpReviews />
-
 
         </div>
       </div>
