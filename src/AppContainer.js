@@ -3,7 +3,7 @@ import YelpButton from './yelpButton'
 import FacebookButton from './facebookButton.js'
 import GoogleButton from './GoogleButton'
 import YelpReviews from './yelpReviews'
-import Nav from './nav'
+
 
 export default React.createClass({
 
@@ -40,7 +40,6 @@ export default React.createClass({
 
 
             <YelpReviews />
-                <Nav/>
 
         </div>
       </div>
