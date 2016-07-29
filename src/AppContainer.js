@@ -1,7 +1,9 @@
 import React from 'react'
 import YelpButton from './yelpButton'
-import FacebookButton from './facebookButton.js'
+import FacebookButton from './facebookButton'
 import GoogleButton from './GoogleButton'
+import ReviewBox from './reviewBox'
+
 
 
 export default React.createClass({
@@ -14,11 +16,14 @@ export default React.createClass({
             <img height='60' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
         </div>
-
         <div  className='is-flex' style={styles.content}>
 
           <div style={styles.button}>
-            <YelpButton/>
+            <GoogleButton/>
+          </div>
+
+          <div>
+            <ReviewBox/>
           </div>
 
           <div style={styles.button}>
@@ -26,7 +31,7 @@ export default React.createClass({
           </div>
 
           <div style={styles.button}>
-            <GoogleButton/>
+            <YelpButton/>
           </div>
 
         </div>
@@ -38,8 +43,6 @@ export default React.createClass({
 const styles = {
   app:{
     flexDirection: 'column',
-    height: '80vh',
-
   },
   nav:{
     alignItems:'center',
