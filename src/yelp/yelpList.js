@@ -8,7 +8,7 @@ export default React.createClass({
       postTime.setUTCSeconds(r.time_created)
       postTime = postTime.toString().substring(0, 15)
       return(
-        <div key={r.id} className="box">
+        <div key={r.id} className="box container">
           <article className="media">
             <div className="media-left">
               <figure className="image is-64x64">

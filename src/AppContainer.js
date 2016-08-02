@@ -1,8 +1,9 @@
 import React from 'react'
-import YelpButton from './yelpButton'
+import YelpButton from './yelp/yelpButton'
 import FacebookButton from './facebookButton.js'
-import GoogleButton from './GoogleButton'
-import YelpReviews from './yelpReviews'
+import GoogleButton from './google/GoogleButton'
+import YelpReviews from './yelp/yelpReviews'
+import ReviewBox from './google/reviewBox'
 
 
 export default React.createClass({
@@ -20,26 +21,31 @@ export default React.createClass({
             <img height='60' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
         </div>
-
         <div  className='is-flex' style={styles.content}>
 
           <div style={styles.button}>
             <GoogleButton/>
+
           </div>
 
-          <div style={styles.button}>
-            <YelpButton/>
+          <div>
+            <ReviewBox/>
+
           </div>
+
+
 
           <div style={styles.button}>
             <FacebookButton/>
           </div>
 
+          <div style={styles.button}>
+            <YelpButton/>
 
-
-
-
+          </div>
+          <div>
             <YelpReviews />
+          </div>
 
         </div>
       </div>
@@ -50,8 +56,7 @@ export default React.createClass({
 const styles = {
   app:{
     flexDirection: 'column',
-    height: '100vh',
-
+    // height: '100vh',
   },
   nav:{
     alignItems:'center',
