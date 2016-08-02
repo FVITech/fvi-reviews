@@ -2,7 +2,7 @@ import React from 'react'
 import {mount, shallow} from 'enzyme'
 import {expect} from 'chai'
 
-import GoogleButton from '../src/GoogleButton'
+import GoogleButton from '../src/google/GoogleButton'
 import YelpButton from '../src/yelpButton'
 import FacebookButton from '../src/facebookButton.js'
 

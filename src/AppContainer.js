@@ -1,8 +1,8 @@
 import React from 'react'
 import YelpButton from './yelpButton'
 import FacebookButton from './facebookButton'
-import GoogleButton from './GoogleButton'
-import ReviewBox from './reviewBox'
+import GoogleButton from './google/GoogleButton'
+import ReviewBox from './google/reviewBox'
 
 
 
