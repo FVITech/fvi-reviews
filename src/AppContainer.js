@@ -44,10 +44,11 @@ export default React.createClass({
           <hr/>
           <div style={styles.button}>
             <GoogleButton/>
-
           </div>
+                    <hr/>
           <div className='is-flex' style={styles.button}>
-            <FacebookButton/> &nbsp; &nbsp; &nbsp; <YelpButton/>
+            <div style={{margin:5}}><FacebookButton/></div>
+            <div style={{"margin":5}}><YelpButton/></div>
           </div>
 
           <hr/>
@@ -96,14 +97,15 @@ const styles = {
     flex:8  ,
     alignItems:'center',
     justifyContent:'center',
-     flexWrap: 'wrap',
+
     flexDirection: 'column',
 
 
   },
   button:{
+    flexWrap: 'wrap',
 
-    margin: 20,
+    justifyContent:'center',
     flexDirection: 'row',
 
   }

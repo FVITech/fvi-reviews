@@ -7,7 +7,7 @@ export default React.createClass({
       <div>
         <a href={url} className='button is-danger is-large'>
           <span className="icon"><i className="fa fa-yelp"></i></span>
-          <span>Review FVI on Yelp</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span>Review FVI on Yelp</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </a>
       </div>
     )
