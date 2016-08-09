@@ -24,7 +24,7 @@ export default React.createClass({
 
           <div style={{margin:10}}className="message is-primary container">
             <div className="message-header">
-              Our Current Rating:
+              Current Rating:
             </div>
             <div className="message-body" >
 
