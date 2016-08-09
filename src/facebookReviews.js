@@ -2,7 +2,7 @@ import React from 'react'
 import ReviewList from './facebookList'
 
 
-const token = 'EAACbrcvyUC4BAGF6K2jxADXY94RPwO1i3wLfEQIbvB8CfebgWt17MD4UlFw1TKAQ4CYh2FmJu8KEjWHVOxV6qPhHMZCZAnORqfHdMr52KL6ZBFZBqUXdvqycNNotdKIMPq7eZCtYd0NOLwzROZBqAIfTcFRhHKZC4MrQv1DO32IKwvgXHpZBpwp3'
+const token = 'EAACbrcvyUC4BAJ4WKf87mP2QoexDQswoNiINIFBIr47uwccqHjmuWoFXpIZA6UbTBdFcRCbtxIz1AVIM6Hw2iH2kVhV26AbJdMihlv7SZBPkO2i67iVVbdYu14MCvW583OzeYjKOsPM90OXcAbzHSdQ2S9z0G7GJyAiATfUAZDZD'
 
 export default React.createClass({
 
@@ -27,14 +27,15 @@ fbReviews(){
       {},
       function(response) {
         getReviews(response.data)// recieving payload..good
-        console.log(response.data, 'recieving payload')
+        // console.log(response.data,'recieving payload')
       },
     );
 
        const getReviews = (d) =>{
 
          this.setState({reviews: d})
-         console.log(this.state.reviews)
+         //  const ids = ({d}).map(i=>d.reviewer.id)
+
        }
 
 },

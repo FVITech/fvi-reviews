@@ -19,7 +19,7 @@ export default React.createClass({
         <div  className='is-flex' style={styles.content}>
 
           <div style={styles.button}>
-            <YelpButton/>
+            <GoogleButton/>
           </div>
 
           <div style={styles.button}>
@@ -27,12 +27,14 @@ export default React.createClass({
           </div>
 
           <div style={styles.button}>
-            <GoogleButton/>
-          </div>
-
-          <div>
             <FacebookReviews />
           </div>
+
+          <div style={styles.button}>
+            <YelpButton/>
+          </div>
+
+
 
         </div>
       </div>
@@ -54,7 +56,7 @@ const styles = {
     flex: 1,
   },
   content:{
-    flex:8  ,
+    flex:8,
     alignItems:'center',
     justifyContent:'center',
     flexDirection: 'column',

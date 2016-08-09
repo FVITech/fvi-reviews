@@ -12,11 +12,14 @@ export default React.createClass({
         totalStars.push((<span key={i.toString()} className="icon is-small"><i className="fa fa-star" aria-hidden="true"></i></span>))
       }
 
+
+
       return (
 
-        <div key={r.created_time} className="box"  >
+        <div className="container">
+        <div key={r.created_time} className="box">
           <article className="media">
-            <div className="media-left">
+            <div className="media-center">
               <figure className="image is-64x64">
                 <img src='' alt="Image"/>
               </figure>
@@ -40,6 +43,7 @@ export default React.createClass({
             </div>
           </article>
         </div>
+        </div>
 
 
       )
@@ -48,15 +52,30 @@ export default React.createClass({
   },
 
 
-
-
   render(){
     return(
-      <div>
+      <div style={styles.container} >
+        <div style={styles.box}>
 
         {this.reviewList()}
+
+        </div>
 
       </div>
     )
   }
 })
+
+const styles = {
+  container:{
+    fontSize: '20',
+    padding: '10px',
+    margin: '10px',
+  },
+
+  box: {
+    margin: '30px'
+  }
+
+
+}
