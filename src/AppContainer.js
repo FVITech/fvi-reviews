@@ -1,8 +1,9 @@
 import React from 'react'
 import YelpButton from './yelp/yelpButton'
-import FacebookButton from './facebookButton.js'
+import FacebookButton from './facebook/facebookButton.js'
 import GoogleButton from './google/GoogleButton'
 import YelpReviews from './yelp/yelpReviews'
+import FacebookReviews from './facebook/facebookReviews'
 import ReviewBox from './google/reviewBox'
 
 
@@ -20,13 +21,40 @@ export default React.createClass({
           <a href="#">
             <img height='60' src="http://www.fvi.edu/wp-content/themes/fvi/images/fvi-logo.png"/>
           </a>
+
+          <div style={{margin:10}}className="message is-primary container">
+            <div className="message-header">
+              Our Current Rating:
+            </div>
+            <div className="message-body" >
+
+              <span className="icon"><i className="fa fa-star" aria-hidden="true"></i></span>
+              <span className="icon"><i className="fa fa-star" aria-hidden="true"></i></span>
+              <span className="icon"><i className="fa fa-star" aria-hidden="true"></i></span>
+              <span className="icon"><i className="fa fa-star" aria-hidden="true"></i></span>
+              <span className="icon"><i className="fa fa-star" aria-hidden="true"></i></span> &nbsp;
+              <span>4.7 stars </span>
+              <div>
+                <progress className="progress is-success" value="90" max="100">90%</progress>
+              </div>
+            </div>
+          </div>
         </div>
         <div  className='is-flex' style={styles.content}>
-
+          <hr/>
           <div style={styles.button}>
             <GoogleButton/>
 
           </div>
+          <div className='is-flex' style={styles.button}>
+            <FacebookButton/> &nbsp; &nbsp; &nbsp; <YelpButton/>
+          </div>
+
+          <hr/>
+          <div className='container' style={{width:'100%', margin:30}}>
+          <h1 className="subtitle is-3">Most Recent Reviews from Facebook, Google, and Yelp:</h1>
+          </div>
+
 
           <div>
             <ReviewBox/>
@@ -35,17 +63,17 @@ export default React.createClass({
 
 
 
-          <div style={styles.button}>
-            <FacebookButton/>
+
+          <div>
+            <FacebookReviews />
           </div>
 
-          <div style={styles.button}>
-            <YelpButton/>
 
-          </div>
           <div>
             <YelpReviews />
           </div>
+
+
 
         </div>
       </div>
@@ -62,7 +90,6 @@ const styles = {
     alignItems:'center',
     justifyContent:'space-around',
     backgroundColor: 'white',
-    fontSize: '30',
     flex: 1,
   },
   content:{
@@ -75,6 +102,9 @@ const styles = {
 
   },
   button:{
-    margin: 20
+
+    margin: 20,
+    flexDirection: 'row',
+
   }
 }

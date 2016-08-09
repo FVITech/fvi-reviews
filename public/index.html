@@ -14,7 +14,26 @@
 
 
 <body>
+  <script id="facebook-jssdk" src="//connect.facebook.net/en_US/all.js&appId=171170753302574"></script>
 
+
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '171170753302574',
+        xfbml      : true,
+        version    : 'v2.7'
+        });
+      FB.getLoginStatus(function(response) {
+          if (response.status === 'connected') {
+          }
+          else {
+            FB.login();
+
+          }
+      });
+    };
+  </script>
   <div id="root"></div>
   <div id='map'></div>
   <script src="bundle.js"></script>
