@@ -46,7 +46,7 @@ export default React.createClass({
 
             <GoogleButton/>
           </div>
-
+          <hr/>
           <div className='is-flex' style={styles.button}>
             <div style={{margin:5}}><FacebookButton/></div>
             <div style={{"margin":5}}><YelpButton/></div>
