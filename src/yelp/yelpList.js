@@ -8,7 +8,7 @@ export default React.createClass({
       postTime.setUTCSeconds(r.time_created)
       postTime = postTime.toString().substring(0, 15)
       return(
-        <div style={{padding:10}} key={r.id} className="box container">
+        <div key={r.id} className="box container">
           <article className="media">
             <div className="media-left">
               <figure className="image is-64x64">
@@ -35,6 +35,6 @@ export default React.createClass({
     })
   },
   render (){
-    return <div>{this._getList()}</div>
+    return <div style={{padding:10}}  >{this._getList()}</div>
   }
 })
