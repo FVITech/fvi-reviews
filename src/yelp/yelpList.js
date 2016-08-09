@@ -35,6 +35,6 @@ export default React.createClass({
     })
   },
   render (){
-    return <div style={{padding:10}}  >{this._getList()}</div>
+    return <div style={{margin:20}}>{this._getList()}</div>
   }
 })
