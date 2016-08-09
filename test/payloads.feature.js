@@ -3,9 +3,9 @@ import {mount, shallow} from 'enzyme'
 import {expect} from 'chai'
 import {spy} from 'sinon'
 import $ from 'jquery'
-import YelpReviews from '../src/yelpReviews'
-import YelpList from '../src/yelpList'
-import OAuth from '../src/OAuth'
+import YelpReviews from '../src/yelp/yelpReviews'
+import YelpList from '../src/yelp/yelpList'
+import OAuth from '../src/yelp/OAuth'
 
 
 describe('Payloads', function (){
@@ -60,7 +60,7 @@ describe('Payloads', function (){
           'success': d=>{
                   try {
                     expect(Object.keys(d)).to.eql([
-                     'is_claimed',
+                    'is_claimed',
                     'rating',
                     'mobile_url',
                     'rating_img_url',

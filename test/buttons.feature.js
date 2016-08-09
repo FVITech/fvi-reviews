@@ -3,7 +3,7 @@ import {mount, shallow} from 'enzyme'
 import {expect} from 'chai'
 
 import GoogleButton from '../src/google/GoogleButton'
-import YelpButton from '../src/yelpButton'
+import YelpButton from '../src/yelp/yelpButton'
 import FacebookButton from '../src/facebookButton.js'
 
 Feature('Review buttons',
@@ -71,10 +71,6 @@ Feature('Review buttons',
     })
 
   })
-
-
-
-
 
 
   Scenario('User wants to review fvi.edu with google',()=>{
