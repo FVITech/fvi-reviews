@@ -1,3 +1,5 @@
+[![Stories in Ready](https://badge.waffle.io/wordyallen/fvi-reviews.png?label=ready&title=Ready)](https://waffle.io/wordyallen/fvi-reviews)
+[![Stories in Ready](https://badge.waffle.io/wordyallen/fvi-reviews.png?label=ready&title=Ready)](https://waffle.io/wordyallen/fvi-reviews)
 # FVI Review Portal
 
 [![build status](https://img.shields.io/travis/reactjs/redux/master.svg?style=flat-square)](https://travis-ci.org/reactjs/redux) [![Stories in Ready](https://badge.waffle.io/wordyallen/fvi-reviews.png?label=ready&title=Ready)](http://waffle.io/wordyallen/fvi-reviews)
